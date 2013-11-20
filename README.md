@@ -1,9 +1,25 @@
-# generator-madlib-module [![Build Status](https://secure.travis-ci.org/Qwerios/generator-madlib-module.png?branch=master)](https://travis-ci.org/Qwerios/generator-madlib-module)
+# generator-madlib-module
 
-A generator for [Yeoman](http://yeoman.io).
+A [Yeoman](http://yeoman.io) based generator for madlib modules.
 
 
 ## Getting Started
+
+First make sure yo and and the generator are installed:
+```bash
+$ npm install -g yo generator-madlib-module
+```
+
+You may need to have sudo permissions to install globally.
+After that you can create a new madlib module by creating a folder and then using the following command:
+```bash
+$ mkdir madlib-my-module
+$ cd madlib-my-module
+$ yo madlib-module
+```
+
+Yeoman will appear and ask you a few questions. Once they have been answered he will generate the required files to get started.
+
 
 ### What is Yeoman?
 

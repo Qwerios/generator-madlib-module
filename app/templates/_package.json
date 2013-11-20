@@ -2,7 +2,7 @@
     "name": "<%= _.slugify(packageName) %>",
     "description": "<%= packageDescription %>",
     "main": "lib/<%= _.slugify(mainName) %>.js",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "author":
     {
         "name": "<%= authorName %>",
