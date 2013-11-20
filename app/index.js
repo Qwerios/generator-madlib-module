@@ -26,6 +26,12 @@
     {
         var cb = this.async();
 
+        // Get the current running directory name
+        //
+        var fullPath   = __dirname
+        ,   folderName = fullPath.split( '/' ).pop()
+        ;
+
         // Have Yeoman greet the user
         //
         console.log( this.yeoman );
@@ -36,6 +42,7 @@
             {
                 name:       'packageName'
             ,   message:    'What is the name of this module?'
+            ,   default:    folderName
             }
         ,   {
                 name:       'packageDescription'
