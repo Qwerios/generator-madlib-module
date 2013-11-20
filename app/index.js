@@ -75,6 +75,7 @@
         this.mkdir( 'test' );
 
         this.template( '_package.json', 'package.json' );
+        this.template( 'README.md',     'README.md'    );
 
         this.copy( 'GruntFile.coffee',  'GruntFile.coffee'  );
         this.copy( 'LICENSE',           'LICENSE'           );
