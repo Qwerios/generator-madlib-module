@@ -78,6 +78,7 @@
 
         this.copy( 'GruntFile.coffee',  'GruntFile.coffee'  );
         this.copy( 'LICENSE',           'LICENSE'           );
+        this.copy( 'module.coffee',     'src/' + this._.slugify( this.mainName ) + '.coffee' );
     };
 
     MadlibModuleGenerator.prototype.projectfiles = function projectfiles( )
