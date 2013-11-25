@@ -5,6 +5,11 @@
     var path   = require( 'path' );
     var yeoman = require( 'yeoman-generator' );
 
+    // Get the current running directory name
+    //
+    var fullPath   = process.cwd();
+    var folderName = fullPath.split( '/' ).pop();
+
     var MadlibModuleGenerator = module.exports = function MadlibModuleGenerator( args, options, config )
     {
         yeoman.generators.Base.apply( this, arguments );
@@ -25,12 +30,6 @@
     MadlibModuleGenerator.prototype.askFor = function askFor( )
     {
         var cb = this.async();
-
-        // Get the current running directory name
-        //
-        var fullPath   = __dirname
-        ,   folderName = fullPath.split( '/' ).pop()
-        ;
 
         // Have Yeoman greet the user
         //
