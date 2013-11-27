@@ -1,9 +1,9 @@
-( function( )
+( function()
 {
     'use strict';
-    var util   = require( 'util' );
-    var path   = require( 'path' );
-    var yeoman = require( 'yeoman-generator' );
+    var util    = require( 'util' );
+    var path    = require( 'path' );
+    var yeoman  = require( 'yeoman-generator' );
 
     // Get the current running directory name
     //
@@ -29,7 +29,7 @@
 
     MadlibModuleGenerator.prototype.askFor = function askFor( )
     {
-        var cb = this.async();
+        var callback = this.async();
 
         // Have Yeoman greet the user
         //
@@ -55,10 +55,12 @@
         ,   {
                 name:       'authorName'
             ,   message:    'What is your name?'
+            ,   default:    this.user.git.username
             }
         ,   {
                 name:       'authorEmail'
             ,   message:    'What is your email?'
+            ,   default:    this.user.git.email
             }
         ];
 
@@ -70,7 +72,7 @@
             this.authorName         = props.authorName;
             this.authorEmail        = props.authorEmail;
 
-            cb();
+            callback();
         }.bind( this ) );
     };
 
