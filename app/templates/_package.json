@@ -3,15 +3,21 @@
     "description": "<%= packageDescription %>",
     "main": "lib/<%= _.slugify(mainName) %>.js",
     "version": "0.1.0",
-    "author":
-    {
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Qwerios/<%= _.slugify(packageName) %>.git"
+    },
+    "keywords": [
+        "madlib"
+    ],
+    "author": {
         "name": "<%= authorName %>",
         "email": "<%= authorEmail %>",
-        "url": "https://github.com/Marviq"
+        "url": "https://github.com/Qwerios"
     },
     "scripts":
     {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "command -v grunt >/dev/null 2>&1 && grunt test || { echo >&2 'Grunt is not installed'; }",
         "prepublish": "command -v grunt >/dev/null 2>&1 && grunt || { echo >&2 'Grunt is not installed'; }"
     },
     "devDependencies":

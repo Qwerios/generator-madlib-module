@@ -92,6 +92,7 @@
 
     MadlibModuleGenerator.prototype.projectfiles = function projectfiles( )
     {
+        this.copy( 'travis.yml',    '.travis.yml'   );
         this.copy( 'editorconfig',  '.editorconfig' );
         this.copy( 'jshintrc',      '.jshintrc'     );
         this.copy( 'gitignore',     '.gitignore'    );

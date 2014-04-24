@@ -5,18 +5,18 @@
   "keywords": [
     "yeoman-generator"
   ],
-  "homepage": "https://github.com/Marviq/generator-madlib-module",
-  "bugs": "https://github.com/Marviq/generator-madlib-module/issues",
+  "homepage": "https://github.com/Qwerios/generator-madlib-module",
+  "bugs": "https://github.com/Qwerios/generator-madlib-module/issues",
   "author": {
     "name": "Mark Doeswijk",
-    "email": "mark.doeswijk@marviq.com",
-    "url": "https://github.com/Marviq"
+    "email": "mdoeswijk@gmail.com",
+    "url": "https://github.com/Qwerios"
   },
-  "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "https://stash.marviq.com/scm/gen/madlib-module.git"
+    "url": "https://github.com/Qwerios/generator-madlib-module.git"
   },
+  "main": "app/index.js",
   "scripts": {
     "test": "mocha"
   },
