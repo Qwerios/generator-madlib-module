@@ -5,10 +5,10 @@
     var path    = require( 'path' );
     var yeoman  = require( 'yeoman-generator' );
 
-    // Get the current running directory name
+    // Determine packageName based on current folder name
     //
-    var fullPath   = process.cwd();
-    var folderName = fullPath.split( '/' ).pop();
+    var fullPath    = process.cwd();
+    var packageName = fullPath.split( path.sep ).pop()
 
     var MadlibModuleGenerator = module.exports = function MadlibModuleGenerator( args, options, config )
     {
@@ -22,7 +22,8 @@
             } );
         } );
 
-        this.pkg = JSON.parse( this.readFileAsString( path.join( __dirname, '../package.json' ) ) );
+        this.pkg         = JSON.parse( this.readFileAsString( path.join( __dirname, '../package.json' ) ) );
+        this.currentYear = new Date().getFullYear()
     };
 
     util.inherits( MadlibModuleGenerator, yeoman.generators.Base );
@@ -41,7 +42,7 @@
             {
                 name:       'packageName'
             ,   message:    'What is the name of this module?'
-            ,   default:    folderName
+            ,   default:    packageName
             }
         ,   {
                 name:       'packageDescription'
@@ -84,9 +85,9 @@
 
         this.template( '_package.json', 'package.json' );
         this.template( 'README.md',     'README.md'    );
+        this.template( 'LICENSE',       'LICENSE'      );
 
         this.copy( 'GruntFile.coffee',  'GruntFile.coffee'  );
-        this.copy( 'LICENSE',           'LICENSE'           );
         this.copy( 'module.coffee',     'src/' + this._.slugify( this.mainName ) + '.coffee' );
     };
 
